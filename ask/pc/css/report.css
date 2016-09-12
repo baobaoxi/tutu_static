@@ -1,0 +1,87 @@
+.report-item{
+    width: 280px;
+    margin-right: 40px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    float: left;
+}
+.report-item .report-item-img{
+    height: 160px;
+    width: 280px;
+    overflow: hidden;
+    position: relative;
+}
+.report-item .report-item-img img{
+    width: 100%;
+}
+.report-item .report-item-img .layer{
+        width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+.report-item .report-item-img .layer p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 54px;
+}
+.report-item .report-item-img .layer .quality{
+        position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.report-item .report-item-img .layer .time-long{
+      position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.report-item .report-item-info{
+    height: 24px;
+    color: #999;
+    padding: 13px 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+.report-item .report-item-info .time{
+    padding-left: 20px;
+    background: url(./../img/icon_time.jpg)no-repeat;
+    background-position-y: -2px;
+    
+}
+.report-item .report-item-info .comment-num{
+    padding-left: 26px;
+    background: url(./../img/icon_comment.jpg)no-repeat;
+    background-position-y: -1px;
+}
+.report-item .report-item-info .vote-num{
+    padding-left: 26px;
+    background: url(./../img/icon_vote.png)no-repeat;
+    background-position-y: -1px;
+    margin-left: 5px;
+}
+.report-more-wrap{
+    width: 100%;
+    height: 50px;
+    background: #eee;
+    text-align: center;
+    line-height: 50px;
+    color: #666;
+    font-size: 16px;
+}

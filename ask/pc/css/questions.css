@@ -1,0 +1,62 @@
+.comment-add-text{
+    width: 716px;
+    height: 100px;
+    display: block;
+    border: 1px solid #e1e1e1;
+}
+.comment-list-up{
+    height: 48px;
+    display: block;
+    line-height: 48px;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.answers-more{
+    height: 50px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    background: #eee;
+    color: #666;
+    cursor: pointer;
+}
+.answers-add-wrap{
+    margin-top: 25px;
+    padding-top: 25px;
+    margin-bottom: 120px;
+}
+.answers-add-wrap .user-info-wrap{
+   line-height: 32px;
+    height: 32px;
+    margin-bottom: 20px;
+}
+.answers-add-wrap .user-info-wrap img{
+    width: 32px;
+    height: 32px;
+        display: block;
+    float: left;
+    border-radius: 50%;
+}
+.answers-add-wrap .user-info-wrap .user-name{
+    color: #34547c;
+    font-size: 16px;
+        display: block;
+    margin: 0 10px;
+    float: left;
+}
+.answers-add-wrap .user-info-wrap .user-info{
+    color: #999;
+}
+.answers-add-wrap .answers-text{
+    width: 100%;
+    height: 140px;
+    border:1px solid #e1e1e1;
+    
+}
+.ask-num-wrap{
+    height: 60px;
+    line-height: 60px;
+}

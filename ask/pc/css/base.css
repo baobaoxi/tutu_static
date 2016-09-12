@@ -1,0 +1,333 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'microsoft yahei';
+	
+}
+a{
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+}
+.un-margin-left{
+    margin-left: 0 !important;
+}
+.co-999{
+	color: #999;
+}
+.co-333{
+	color: #333;
+}
+.hide{
+	display: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.main-wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.main-wrap-1240{
+    width: 1240px;   
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.header{
+	height: 80px;
+}
+.header .header-bar{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.header .header-bar .logo{
+	background: url(./../img/tutu_logo.png) no-repeat;
+	width: 193px;
+    height: 63px;
+    background-size: 100%;
+    float: left;
+    margin-top: 8px;
+}
+.header .header-bar .nav{
+	float: left;
+    width: 550px;
+    margin: 0 115px;
+    font-size: 18px;
+    line-height: 80px;
+}
+
+.header .header-bar .nav li{
+	float: left;
+	margin: 0 30px;
+    list-style: none;
+}
+.header .header-bar .nav li.active{
+	color: #cc0000;
+}
+.header .header-bar .user-login-wrap{
+	 width: 108px;
+    height: 32px;
+    float: right;
+    background: #cc0000;
+    border-radius: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    font-size: 14px;
+    top: 24px;
+    position: relative;
+}
+.header .header-bar .search-wrap{
+	position: absolute;
+    top: 30px;
+    right: 130px;
+
+}
+.search-wrap .search-words{
+	 background:rgba(255,255,255,.7) url(./../img/icon_search.png) no-repeat;
+       display: block;
+    background-position: 0;
+    padding-left: 30px;
+    background-size: 28px;
+ 
+}
+.border {
+	position: relative;
+	border: none!important
+}
+
+.border::after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0%;
+	left: 0;
+	border: 0 solid #e1e1e1;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	pointer-events: none;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.border-top::after {
+	border-top-width: 1px
+}
+
+.border-right::after {
+	border-right-width: 1px
+}
+
+.border-bottom::after {
+	border-bottom-width: 1px
+}
+
+.border-left::after {
+	border-left-width: 1px
+}
+
+.border-all::after {
+	border-width: 1px
+}
+.title{
+	font-size: 24px;
+	line-height: 24px;
+}
+.desc{
+	font-size: 16px;
+	color: #666;
+	line-height: 28px;
+}
+.left-wrap{
+	width: 835px;
+	float: left;
+}
+.left-wrap .wrap-nav{
+	background: #fafafa;
+	height: 60px;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 60px;
+}
+.left-wrap .wrap-nav li{
+	list-style: none;
+	float: left;
+	cursor: pointer;
+	padding: 0 25px;
+}
+.left-wrap .wrap-nav li.active{
+ 	background: #fff;
+    border-top: 3px solid #cc0000;
+    position: relative;
+    top: 0px;
+    z-index: 10;
+    height: 57px;
+}
+.ask-info-all{
+	color: #34547c;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+footer{
+    background-color: #333333;
+    height: 178px;
+    width: 100%;
+}
+.footer-wrap{
+    width: 1020px;
+    margin: 0 auto;
+}
+footer .footer-left{
+    width: 650px;
+    padding-top: 35px;
+    float: left;
+}
+footer .footer-right{
+    width: 350px;
+    float: right;
+    margin-top: 50px;
+    position: relative;
+}
+footer .footer-left .footer-logo{
+    background: url(./../img/icon_footer_logo.png)no-repeat;
+    display: block;
+    width: 196px;
+    height: 52px;
+}
+footer .footer-left div a{
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin-right:25px;
+}
+footer .footer-left div span{
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+}
+footer .footer-left div span .icp-logo{
+    background: url(./../img/icon_icp.png)no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 24px;
+    background-position-y: 2px;
+}
+footer .footer-right .footer-wechat-qrcode{
+    position: absolute;
+    display: none;
+    background:#fff url(./../img/icon_fooer_qrcode.png)no-repeat;
+    width: 120px;
+    height: 120px;
+    bottom: 80px;
+    left: -25px;
+    background-position: 3px 5px;
+    border: 3px solid #eee;
+}
+footer .footer-right .footer-wechat{
+    display: inline-block;
+    background: url(./../img/icon_wechat.png) no-repeat;
+    width: 79px;
+    height: 70px;
+    cursor: pointer;
+    background-position: -3px 0;
+}
+footer .footer-right .footer-wechat:hover{
+     background: url(./../img/icon_wechat_act.png) no-repeat;
+}
+footer .footer-right .footer-weibo{
+    display: inline-block;
+    background: url(./../img/icon_weibo.png) no-repeat;
+    width: 79px;
+    height: 70px;
+    cursor: pointer;
+}
+footer .footer-right .footer-weibo:hover{
+     background: url(./../img/icon_weibo_act.png) no-repeat;
+}
+footer .footer-right .footer-iphone{
+    display: inline-block;
+    background: url(./../img/icon_iphone.png) no-repeat;
+    width: 79px;
+    height: 70px;
+    cursor: pointer;
+}
+footer .footer-right .footer-iphone:hover{
+     background: url(./../img/icon_iphone_act.png) no-repeat;
+}
+footer .footer-right .footer-android{
+    display: inline-block;
+    background: url(./../img/icon_android.png) no-repeat;
+    width: 79px;
+    height: 70px;
+    cursor: pointer;
+}
+footer .footer-right .footer-android:hover{
+     background: url(./../img/icon_android_act.png) no-repeat;
+}
+.comment-page{
+    text-align: center;
+    padding: 30px;
+}
+.comment-page span{
+    color: #999;
+    display: inline-block;
+    padding: 8px 10px;
+    line-height: 16px;
+    font-size: 16px;
+    background: #fff;
+    border:1px solid #e1e1e1;
+    cursor: pointer;
+}
+.comment-page span:hover{
+    color: #333;
+    background: #eee;
+}
+.comment-btn{
+    width: 96px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #c00;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn-disabled{
+    background: #eee;
+    color: #999;
+}
+.arrow-up-xl-gray{
+    background: url(./../img/arrow/icon_arrow_up_xl_gray.png)no-repeat;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    background-position: 0 3px;
+    margin-right: 6px;
+}
+.arrow-down-xl{
+    background: url(./../img/arrow/icon_arrow_down_xl.png)no-repeat;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    background-position: 0 3px;
+    margin-right: 6px;
+}

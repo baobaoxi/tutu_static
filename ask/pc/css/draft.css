@@ -1,0 +1,22 @@
+.wrap-main .draft-item{
+	padding:  26px 0;
+}
+
+.wrap-main .draft-item .draft-item-right{
+
+}
+.wrap-main .draft-item .draft-item-right .draft-info{
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+.wrap-main .draft-item .draft-item-right .draft-item-bottom{
+	color: #999;
+	font-size: 16px;
+}
+.wrap-main .draft-item .draft-item-right .draft-item-bottom span{
+	margin-right:24px;
+}
+.wrap-main .draft-item .draft-item-right .draft-item-bottom span.draft-item-delete,span.draft-item-edit {
+	cursor: pointer;
+	color: #c00;
+}

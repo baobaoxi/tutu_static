@@ -1,0 +1,27 @@
+.wrap-main .follow-item{
+	padding:  26px 0;
+}
+
+.wrap-main .follow-item .follow-item-right{
+
+}
+.wrap-main .follow-item .follow-item-right .follow-info{
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+.wrap-main .follow-item .follow-item-right .follow-item-bottom{
+	color: #999;
+	font-size: 16px;
+	margin-top: 15px;
+}
+.wrap-main .follow-item .follow-item-right .follow-item-bottom span{
+	margin-right:24px;
+}
+.wrap-main .follow-item .follow-item-right .follow-item-bottom span.follow-item-num,span.follow-item-share,span.follow-item-report {
+	cursor: pointer;
+}
+.wrap-main .follow-item .follow-item-right .follow-item-bottom span.follow-item-num span{
+	color: #cc0000;
+	margin:0;
+}
+

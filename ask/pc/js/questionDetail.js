@@ -1,0 +1,6 @@
+var questionDetail = {
+    
+    init:function(){
+        
+    }
+}

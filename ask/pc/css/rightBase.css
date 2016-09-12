@@ -1,0 +1,178 @@
+.right-wrap{
+	width: 335px;
+	float: right;
+}
+.right-wrap .right-title{
+	height: 30px;
+    line-height: 30px;
+    border-left: 5px solid #cc0000;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.right-wrap .right-user-center{
+	padding: 15px 0 15px 20px;
+    margin-top: 20px;
+    color: #333;
+}
+.right-wrap .right-user-center .center-item{
+	height: 28px;
+	display: block;
+	width: 50%;
+	box-sizing:border-box; 
+	padding-left: 35px;
+	line-height: 28px;
+	margin:5px 0;
+    cursor: pointer;
+}
+.right-wrap .right-user-center .center-item a{
+    text-decoration: none;
+    color: #333;
+}
+.right-wrap .right-user-center .center-item:hover a{
+    text-decoration: none;
+    color: #c00;
+}
+
+.right-wrap .right-user-center .icon-toask{
+	background: url(./../img/icon_toask.png) no-repeat;
+	background-size: 35px 28px;
+        background-position: 1px 1px;
+}
+.right-wrap .right-user-center .icon-toask:hover{
+    color: #c00;
+    background: url(./../img/icon_toask_act.png) no-repeat;
+	background-size: 35px 28px;
+}
+.right-wrap .right-user-center .icon-mq{
+	background: url(./../img/icon_mq.png) no-repeat;
+	background-size: 35px 28px;
+    background-position: -1px 1px;
+}
+.right-wrap .right-user-center .icon-mq:hover{
+     color: #c00;
+    background: url(./../img/icon_mq_act.png) no-repeat;
+	background-size: 35px 28px;
+}
+.right-wrap .right-user-center .icon-ma{
+	background: url(./../img/icon_ma.png) no-repeat;
+	background-size: 35px 28px;
+        background-position: -1px 0px;
+}
+.right-wrap .right-user-center .icon-ma:hover{
+    color: #c00;
+    background: url(./../img/icon_ma_act.png) no-repeat;
+	background-size: 35px 28px;
+}
+.right-wrap .right-user-center .icon-draft{
+	background: url(./../img/icon_draft.png) no-repeat;
+	background-size: 35px 28px;
+    background-position: 1px 1px;
+}
+.right-wrap .right-user-center .icon-draft:hover{
+    color: #c00;
+    background: url(./../img/icon_draft_act.png) no-repeat;
+	background-size: 35px 28px;
+}
+.right-wrap .right-user-center .icon-follow{
+	background: url(./../img/icon_follow.png) no-repeat;
+	background-size: 35px 28px;
+        background-position: 1px -1px;
+}
+.right-wrap .right-user-center .icon-follow:hover{
+    color: #c00;
+    background: url(./../img/icon_follow_act.png) no-repeat;
+	background-size: 35px 28px;
+}
+
+.right-wrap .ask-users-rank-wrap{
+	margin-top: 10px;
+	padding-top: 16px;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap{
+	padding: 0 20px;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item{
+	height: 82px;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item .avatar{
+	padding: 16px 0;
+    height: 50px;
+    display: block;
+    float: left;
+
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item .avatar img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item .rank-user-info{
+	height: 100%;
+    margin-left: 10px;
+     float: left;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item  .user-name{
+	display: block;
+    margin-top: 15px;
+  
+    color: #34547c;
+    font-size: 16px;
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item  .user-info{
+	color: #999;
+	margin-top: 5px;
+	display: block;	
+}
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item .user-vote-num{
+	position: absolute;
+	width: 60px;
+	right: 0;
+	top: 15px;
+	font-size: 16px;
+	color: #666;
+}
+.right-wrap .ask-hot-rank-wrap{
+	margin-top: 10px;
+	padding-top: 16px;
+}
+.right-wrap  .ask-hot-rank-wrap .ranks-wrap{
+	padding: 0 20px;
+}
+.right-wrap  .ask-hot-rank-wrap .ranks-wrap .rank-item{
+	padding: 20px 0 ;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+.right-wrap  .ask-hot-rank-wrap .ranks-wrap .rank-item .hot-answer-num{
+	color: #999;
+}
+.right-wrap .follow-ask-users-wrap{
+	margin-top: 10px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.right-wrap .follow-ask-users-wrap .users-wrap {
+	padding: 10px;
+}
+.right-wrap .follow-ask-users-wrap .users-wrap .follow-user-item{
+	width: 40px;
+	height: 40px;
+	margin: 6px;
+	float: left;
+}
+.right-wrap .follow-ask-users-wrap .users-wrap .follow-user-item img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.right-wrap .follow-ask-users-wrap .follow-user-more-btn{
+	    width: 292px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #eee;
+    line-height: 40px;
+
+}
