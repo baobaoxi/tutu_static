@@ -1,0 +1,219 @@
+.article-main-wrapper{
+    width: 835px;
+    color: #333;
+    padding-top: 40px;
+    float: left;
+}
+.article-main-wrapper .article-title{
+    font-size: 32px;
+    line-height: 32px;
+    
+}
+.article-main-wrapper .article-info-wrap{
+    margin-top: 18px;
+    height: 30px;
+     color: #999;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.article-main-wrapper .article-info-wrap span{
+    float: left;
+}
+.article-main-wrapper .article-info-wrap .user-avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+   
+     font-size: 14px;
+}
+.article-main-wrapper .article-info-wrap  .user-name{
+    margin:0 20px 0 10px;  
+}
+.article-main-wrapper .article-info-wrap  .article-time{
+     font-size: 14px;
+}
+.article-main-wrapper .article-info-wrap  .comment-num{
+     font-size: 14px;
+    margin: 0 20px 0 30px;
+    padding-left: 28px;
+    background: url(./../img/icon_comment.jpg) no-repeat;
+    background-position-y: 2px;
+    
+}
+.article-main-wrapper .article-info-wrap  .vote-num{
+        font-size: 14px;
+    padding-left: 28px;
+    background: url(./../img/icon_vote.png) no-repeat;
+    background-position-y: 2px;
+}
+.article-main-wrapper .article-containt{
+    width: 100%;
+}
+.article-main-wrapper .article-containt img{
+    width: 100%;
+}
+.article-main-wrapper .article-containt p{
+    line-height: 36px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.article-main-wrapper  .article-bottom-tip{
+        display: block;
+    height: 42px;
+    width: 100%;
+    background: #fffcf0;
+    line-height: 42px;
+    border:1px solid #f3eac6;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.article-main-wrapper  .article-bottom-tip .tip-icon{
+       background: url(./../img/icon_article_tip.png)no-repeat;
+    width: 18px;
+    height: 18px;
+    float: left;
+    display: inline-block;
+    margin: 12px 5px 0 5px;
+    
+}
+.article-main-wrapper .article-vote-wrap {
+    width: 234px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    border:1px solid #c00;
+    color: #c00;
+    margin: 0 auto;
+    margin-top: 70px;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+.article-main-wrapper .article-vote-wrap:hover{
+    background: #c00;
+    color: #fff;
+}
+.article-main-wrapper .article-vote-wrap:hover .vote-icon{
+     background: url(./../img/icon_article_vote_act.jpg)no-repeat;
+     background-position-y: -1px;
+}
+.article-main-wrapper .article-vote-wrap  .vote-icon{
+    padding-left: 30px;
+    background: url(./../img/icon_article_vote.jpg)no-repeat;
+    line-height: 28px;
+    display: inline-block;
+    background-position-y: -1px;
+
+}
+.article-main-wrapper .article-vote-wrap-act{
+    background: #c00;
+    color: #fff;
+}
+.article-main-wrapper .article-vote-wrap-act  .vote-icon{
+     background: url(./../img/icon_article_vote_act.jpg)no-repeat;
+     background-position-y: -1px;
+}
+.article-main-wrapper .article-tag{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+    line-height: 14px;
+}
+.article-main-wrapper .article-tag span{
+    color: #333;
+}
+.article-main-wrapper .article-comment-add-wrap{
+    padding-top: 30px;
+    height: 260px;
+}
+.article-main-wrapper .article-comment-add-wrap .title{
+    font-size: 24px;
+    display: block;
+    margin-bottom: 15px;
+}
+.article-main-wrapper .article-comment-add-wrap  textarea{
+    width: 100%;
+    height: 140px;
+    padding: 16px;
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+}
+.article-main-wrapper .article-comment-add-wrap .emote-icon{
+    background: url(./../img/icon_emote.png)no-repeat;
+    padding-left: 26px;
+    color: #999;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    margin-top: 18px;
+}
+.article-main-wrapper .article-comment-add-wrap .commit-btn{
+    padding: 12px 32px;
+    display: block;
+    float: right;
+    background: #e1e1e1;
+    color: #999;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+.article-main-wrapper .article-comment-add-wrap .commit-btn:hover{
+    background: #c00;
+    color: #fff;
+}
+.article-main-wrapper .relate-article .title{
+    line-height: 80px;
+    display: block;
+}
+.article-main-wrapper .relate-article .article-list{
+    width: 850px;
+}
+.article-main-wrapper .relate-article .article-list .article-item{
+    width: 270px;
+    margin-right: 13px;
+    float: left;
+    overflow: hidden;
+    height: 248px;
+    
+}
+.article-main-wrapper .relate-article .article-list .article-item img{
+    width: 100%;
+    height: 170px;
+}
+.article-main-wrapper .relate-article .article-list .article-item .article-title{
+    font-size: 16px;
+    line-height: 28px;
+}
+.article-main-wrapper .article-comment-tag{
+   font-size: 24px;
+    color:#999;
+}
+.article-main-wrapper .article-comment-tag .tag-item-act{
+    color: #333;
+}
+.hot-article-rank{
+    margin-top: 30px;
+    padding-top: 18px;
+}
+.hot-article-rank .rank-article-list{
+    padding: 4px 20px;
+}
+.hot-article-rank .rank-article-list .rank-article-item {
+    padding: 16px 0;
+    height: 60px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.hot-article-rank .rank-article-list .rank-article-item:last-child{
+    border-bottom: 0;
+}
+.hot-article-rank .rank-article-list .rank-article-item img{
+    width:120px;
+    height: 60px;
+    float: left;
+}
+.hot-article-rank .rank-article-list .rank-article-item .title{
+    font-size: 16px;
+    line-height: 26px;
+    margin-left: 140px;
+}
