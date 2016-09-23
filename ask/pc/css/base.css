@@ -34,6 +34,14 @@ a{
 .main-wrap-1240{
     width: 1240px;   
 }
+.main-wrap:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -86,6 +94,9 @@ a{
     font-size: 14px;
     top: 24px;
     position: relative;
+}
+.header .header-bar .user-login-wrap a{
+    color: #fff;
 }
 .header .header-bar .search-wrap{
 	position: absolute;
@@ -255,6 +266,7 @@ footer .footer-right .footer-weibo{
     background: url(./../img/icon_weibo.png) no-repeat;
     width: 79px;
     height: 70px;
+    background-position-x: -1px;
     cursor: pointer;
 }
 footer .footer-right .footer-weibo:hover{
@@ -330,4 +342,11 @@ footer .footer-right .footer-android:hover{
     height: 16px;
     background-position: 0 3px;
     margin-right: 6px;
+}
+.clamp-2{
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -39,6 +39,7 @@
        padding-left: 28px;
     background: url(./../img/icon_vote.png) no-repeat;
     height: 24px;
+    cursor: pointer;
     display: inline-block;
     line-height: 24px;
     margin-right: 5px;
@@ -47,6 +48,7 @@
      padding-left: 28px;
     background: url(./../img/icon_unvote.png) no-repeat;
     height: 24px;
+    cursor: pointer;
     display: inline-block;
     line-height: 24px;
 }
@@ -56,6 +58,7 @@
     height: 24px;
     display: inline-block;
     line-height: 24px;
+    cursor: pointer;
     float: right;
 }
 .comment-item .comment-reply-wrap{

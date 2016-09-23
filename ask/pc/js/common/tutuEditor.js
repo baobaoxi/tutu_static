@@ -1,6 +1,10 @@
 var  tutuEditor           =    {};
+
+//编辑对象
+
 //当前编辑器区块
-tutuEditor.curPartObj      =    null;
+tutuEditor.curPartObj            =    null;
+tutuEditor.curPartIntance      =    {};
 //表情对象
 tutuEditor.emoteObj        =     null;
 //编辑器对象
@@ -42,26 +46,25 @@ tutuEditor.showEmote     =    function(){
 } 
 //显示插入图片
 tutuEditor.showImage     =    function(){
-        var index = layer.open({
+        var _this  = this, index = layer.open({
             title: '选择图片',
             content: '<input id="J_InsertImge"  value="" >',
             area: '200px',
             yes: function(){
                     var  img  = $('#J_InsertImge').val();
-                    tutuEditor.insertImage(img); 
+                    _this.insertImage(img); 
                     layer.closeAll(index);
             }    
         });
 } 
 //显示插入视频
 tutuEditor.showPlay      =    function(){
-
         var _this  =  this, index = layer.open({
             title: '选择视频',
             content: '<input id="J_InsertPlay"  value="" >',
             area: '200px',
             yes: function(){
-                   tutuEditor.insertVideo($('#J_InsertPlay').val()); 
+                   _this.insertVideo($('#J_InsertPlay').val()); 
                    layer.closeAll(index);
             },
             cancel:function(){
@@ -73,24 +76,31 @@ tutuEditor.showPlay      =    function(){
 tutuEditor.setEditOpt     =     function(editorId){
         var _this = this;
         _this.editor        != null &&  UM.delEditor(editorId);
-        _this.editor        = UM.getEditor(editorId,_this.tools);
+        _this.setCurEditor(editorId);
+        //初始化编辑器
+        return _this.editor;
+}
+//初始化编辑器
+tutuEditor.setCurEditor     =     function(editorId){
+        var _this = this;
+        _this.editor        = typeof _this.curPartIntance[editorId] != 'undefined'  ? _this.curPartIntance[editorId] : UM.getEditor(editorId,_this.tools) ;
         _this.curPartObj    = $('#'+editorId).parents('.J_Editor');
         //初始化编辑器
         return _this.editor;
 }
 //获得内容
-tutuEditor.getContent      =    function(){
+tutuEditor.getContent      =    function(editorId){
     var _this = this, content = '';
     if(_this.editor){
         content  =   _this.editor.getContent();
     }
     return content;
 }
+//初始化
 tutuEditor.init           =     function(editorId){
         var _this = this;
         //初始化编辑器
         _this.setEditOpt(editorId);
-
         //添加表情
         _this.curPartObj.find('.J_Emote').click(_this.showEmote);
         //添加图片

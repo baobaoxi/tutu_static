@@ -125,11 +125,13 @@
 }
 .right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item .user-vote-num{
 	position: absolute;
-	width: 60px;
 	right: 0;
 	top: 15px;
+    width: 42px;
 	font-size: 16px;
 	color: #666;
+    padding-left: 28px;
+    background: url(./../img/icon_vote.png)no-repeat;
 }
 .right-wrap .ask-hot-rank-wrap{
 	margin-top: 10px;

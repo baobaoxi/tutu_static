@@ -26,7 +26,7 @@
     padding: 25px;
     box-sizing: border-box;
 }
-.layer-wrapper .ask-layer-wrap .title{
+.layer-wrapper  .title{
     font-size:24px;
     color: #333;
     line-height: 24px;
@@ -84,6 +84,8 @@
 .layer-wrapper .ask-layer-wrap .main-text{
     height: 56px;
     border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
     width: 100%;
     display: block;
 }
@@ -169,4 +171,93 @@
 .icon-anonymous-act{
     background: url(./../img/icon_checkbox_act.png)no-repeat;
     display: inline-block;
+}
+.layer-wrapper .report-layer-wrap{
+    
+}
+.report-layer-wrap .checkbox-wrap{
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+.report-layer-wrap  .checkbox-wrap .checkbox-btn{
+    background: url(./../img/icon_checkbox.png)no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 30px;
+    height: 26px;
+    line-height: 26px;
+}
+.report-layer-wrap .checkbox-wrap .checkbox-btn-act{
+    background: url(./../img/icon_checkbox_act.png)no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 30px;
+    height: 26px;
+    line-height: 26px;
+}
+.report-layer-wrap textarea.explanation-textarea{
+    height: 122px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+}
+.layui-layer .commit-btn{
+   width: 96px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #c00;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.invitation-layer-wrap{
+    padding: 25px;
+    box-sizing: border-box;
+}
+.invitation-layer-wrap .invitation-input-item-wrap{
+    position: relative;
+    height: 68px;
+    margin-top: 30px;
+}
+.invitation-layer-wrap .invitation-input-item-wrap .label{
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 18px;
+    float: left;
+}
+.invitation-layer-wrap .invitation-input-item-wrap .invitation-input{
+    width: 575px;
+    
+    height: 40px;
+    display: inline-block;
+    float: left;
+        margin: 0;
+    box-sizing: border-box;
+}
+.invitation-layer-wrap .invitation-input-item-wrap .invitation-copy-btn{
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    text-align: center;
+    color: #c00;
+}
+.invitation-layer-wrap .invitation-input-item-wrap .invitation-tip{
+    display: block;
+    color: #999;
+    font-size: 14px;
+    position: absolute;
+    left: 90px;
+    top: 50px;
 }

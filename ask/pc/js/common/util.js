@@ -77,15 +77,83 @@ var askUtil = {
                 shadeClose: false,
                 area:['735px','480px'],
                 skin: 'layer-wrapper',
-                content: tpl
+                content: tpl2
             });
             $('.upload-layer-close-btn').on('click',function(){
                 layer.close(uploadLayer);
             });
     },
+    renderReportLayer: function(){
+         var tpl3 = '<div class="ask-layer-wrap report-layer-wrap">'+
+                '<div class="layer-close-btn report-layer-close-btn"></div>'+
+                '<span class="title">举报</span>'+
+                '<div class="checkbox-wrap" id="J_report_type_div">'+
+                '<span class="checkbox-btn" data-type="1">广告</span>'+
+                '<span class="checkbox-btn" data-type="2">造谣</span>'+
+                '<span class="checkbox-btn-act" data-type="3">侵权</span>'+
+                '<span class="checkbox-btn" data-type="4">色情</span>'+
+                '<span class="checkbox-btn" data-type="5">政治</span>'+
+                '</div>'+
+                '<textarea class="explanation-textarea" id="J_report_content"></textarea>'+
+                
+                '<span class="commit-btn" id="J_report_submit">提交</span>'
+                '</div>';
+         var reportLayer =  layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: false,
+                area:['735px','380px'],
+                skin: 'layer-wrapper',
+                content: tpl3
+            });
+        $('.report-layer-close-btn').on('click',function(){
+            layer.close(reportLayer);
+        });
+        
+        //举报类型选择交互
+        $(document).on('click','#J_report_type_div .checkbox-btn',function(){
+            if($(this).hasClass('checkbox-btn-act')){
+                return;
+            }
+            $('#J_report_type_div .checkbox-btn-act').removeClass('checkbox-btn-act').addClass('checkbox-btn');
+            $(this).addClass('checkbox-btn-act').removeClass('checkbox-btn');
+        });
+    },
+    renderInvitationLayer: function(){
+        var tpl = '<div class="invitation-layer-wrap">'+
+                '<div class="layer-close-btn invitation-layer-close-btn"></div>'+
+                '<span class="title">邀请好友加入“车知小组”问答圈</span>'+
+                '<div class="invitation-input-item-wrap">'+
+                '<span class="label">邀请链接：</span>'+
+                '<input type="text" class="invitation-input">'+
+                '<span class="invitation-copy-btn border border-all ">复制</span>'+
+                '<span class="invitation-tip">被邀请用户访问邀请链接，登录并完成问卷即可开通功能</span>'+
+                '</div>'+
+                '<div class="invitation-input-item-wrap">'+
+                '<span class="label">邀请链接：</span>'+
+                '<input type="text" class="invitation-input">'+
+                '<span class="invitation-copy-btn border border-all ">复制</span>'+
+                '<span class="invitation-tip">被邀请用户访问邀请链接，登录并完成问卷即可开通功能</span>'+
+                '</div>'+
+               
+                '<span class="commit-btn">提交</span>'
+                '</div>';
+        
+         var askLayer =  layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: false,
+           area:['735px','360px'],
+            skin: 'layer-wrapper',
+            content: tpl
+        });
+    },
     //发布问题
     saveQuestion:function(){  
             $(document).on('click','#J_SaveQuestion',function(){
+                tutuEditor.setCurEditor('J_QuestionEditor');
                 var  title   =  $('#J_Title').val(),content  = tutuEditor.getContent();
                     
                     if(title == '' || $.trim(title) == ''){
