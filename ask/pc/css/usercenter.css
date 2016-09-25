@@ -1,0 +1,223 @@
+.user-info-wrap{
+    padding-top: 20px ;
+    height: 235px;
+}
+.user-info-wrap .user-img-wrap{
+    width: 168px;
+    float: left;
+    text-align: center;
+    height: 100%;
+}
+.user-info-wrap .user-img-wrap .user-avatar-wrap{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+.user-info-wrap .user-img-wrap .user-avatar-wrap .user-avatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.user-info-wrap .user-img-wrap .user-avatar-wrap  .avatar-change-flayer{
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+}
+.user-info-wrap .user-img-wrap .user-name{
+    font-size: 18px;
+   
+    line-height: 22px;
+    display: block;
+    margin: 0 auto;
+     margin-top: 10px;
+}
+.user-info-wrap .user-basic-info{
+    width: 650px;
+    float: left;
+    height: 10%;
+}
+.user-info-wrap .user-basic-info .info-local{
+    background: url(./../img/icon_local.png)no-repeat;
+    padding-left: 36px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+.user-info-wrap .user-basic-info .info-local span{
+    float: left;
+}
+.user-info-wrap .user-basic-info .info-local .city,.zhiye{
+   padding-right: 26px;
+    background: url(./../img/icon_h_line.png) no-repeat right;
+    display: inline-block;
+}
+.user-info-wrap .user-basic-info .info-local .sex-male{
+    background: url(./../img/icon_sex_man.png) no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.user-info-wrap .user-basic-info .zhiye-info{
+     background: url(./../img/icon_zhiye.png)no-repeat;
+    padding-left: 36px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+.user-info-wrap .user-basic-info .like{
+    background: url(./../img/icon_like.png)no-repeat;
+    padding-left: 36px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+.user-info-wrap .user-basic-info .like .like-edit{
+    display: inline-block;
+    padding-left: 32px;
+    cursor: pointer;
+    background: url(./../img/icon_edit.png) no-repeat;
+    color: #c00;
+}
+.user-info-wrap .user-basic-info .short-desc{
+    background: url(./../img/icon_user.png)no-repeat;
+    padding-left: 36px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+.user-info-wrap .user-basic-info .zhiye-info-warning{
+    color: #c00;
+}
+.user-info-wrap .follow-wrap{
+    text-align: right;
+    float: right;
+}
+
+.user-info-wrap .follow-wrap .follow-tips,.followed-tips{
+    color: #c00;
+}
+.user-info-wrap .follow-wrap .follow-line{
+    margin: 0 10px;
+    color: #999;
+}
+.user-info-wrap .follow-wrap .vote-num{
+    display: block;
+    font-size: 16px;
+    margin: 20px 0;
+}
+.user-info-wrap .follow-wrap .vote-num span{
+    color: #c00;
+}
+.user-info-wrap .follow-wrap  .follow-btn{
+    display: inline-block;
+    width: 98px;
+    height: 40px;
+    background: #c00;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.user-info-wrap .follow-wrap  .sixin-btn{
+    display: inline-block;
+    width: 98px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    border: 1px solid #e1e1e1;
+}
+.user-center-wrap .user-center-list{
+    width: 120px;
+    padding-top: 10px;
+    padding-right: 42px;
+    float: left;
+    
+    
+}
+.user-center-wrap .user-center-list .center-list-item{
+    display: block;
+    text-align: right;
+    height: 48px;
+    position: relative;
+    line-height: 48px;
+    cursor: pointer;
+}
+.user-center-wrap .user-center-list .center-list-item .num{
+       background: #c00;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    right: -22px;
+    top: 2px;
+    border-radius: 50%;
+    height: 16px;
+    line-height: 16px;
+}
+.user-center-wrap .user-center-list .center-item-act{
+    color: #c00;
+}
+.user-center-wrap  .article-list-wrap{
+    margin-left: 192px;
+}
+.user-center-wrap  .article-list-wrap .ask-item {
+    padding: 26px 0;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-info {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-info p{
+    display: inline;
+    color: #666;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-info-all {
+    color: #34547c;
+    text-decoration: none;
+    cursor: pointer;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom {
+    color: #666;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom a{
+    margin-right: 32px;
+    color: #666;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom span{
+    margin-right: 32px;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom .ask-item-edit{
+    color: #c00;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom  .ask-item-answers{
+    padding-left: 30px;
+    background: url(./../img/icon_comment.jpg) no-repeat;
+}
+.user-center-wrap  .article-list-wrap .ask-item .ask-item-bottom  .ask-item-follow{
+    padding-left: 30px;
+  
+    background: url(./../img/icon_follow.png) no-repeat;
+      background-position-y: -3px;
+}
