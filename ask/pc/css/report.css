@@ -30,6 +30,9 @@
     padding: 0 20px;
     margin-top: 54px;
 }
+.report-item .report-item-img .layer a{
+    color: #fff;
+}
 .report-item .report-item-img .layer .quality{
         position: absolute;
     left: 0;

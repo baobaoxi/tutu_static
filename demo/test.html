@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script type="text/javascript" src="./../tutu_static/ask/pc/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="./../tutu_static_demo/ask/pc/js/common/jquery.min.js"></script>
 
-<script type="text/javascript" src="./../tutu_static/ask/pc/layer/layer.js"></script>
-<link rel="stylesheet" href ="./../tutu_static/ask/pc/layer/skin/layer.css">
-<link rel="stylesheet" href ="./../tutu_static/ask/pc/css/base.css">
-<link rel="stylesheet" href ="./../tutu_static/ask/pc/css/layer.css">
-        <script type="text/javascript" src="./../tutu_static/ask/pc/xeditor/xheditor-1.2.2.min.js"></script>
-        <script type="text/javascript" src="./../tutu_static/ask/pc/xeditor/xheditor_lang/zh-cn.js"></script>
-        <script type="text/javascript" src="./../tutu_static/ask/pc/umeditor/umeditor.config.js"></script>
-        <script type="text/javascript" src="./../tutu_static/ask/pc/umeditor/umeditor.js"></script>
-        <script type="text/javascript" src="./../tutu_static/ask/pc/umeditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="./../tutu_static_demo/ask/pc/layer/layer.js"></script>
+<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/layer/skin/layer.css">
+<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/css/base.css">
+<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/css/layer.css">
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/xeditor/xheditor-1.2.2.min.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/xeditor/xheditor_lang/zh-cn.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/umeditor.config.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/umeditor.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/lang/zh-cn/zh-cn.js"></script>
 
 <link rel="stylesheet" href ="./../tutu_static/ask/pc/umeditor/themes/default/css/umeditor.css">
     
@@ -68,15 +68,47 @@
                 '</div>'+
                 '<span class="upload-tips">请不要上传与问答无关的图片，详细请看<a href="###">途途试道使用规范</a></span>'
                 '</div>';
-          var askLayer =  layer.open({
+        
+        var tpl3 = '<div class="ask-layer-btn report-layer-wrap">'+
+                '<div class="layer-close-btn"></div>'+
+                '<span class="title">举报</span>'+
+                '<div class="checkbox-wrap">'+
+                '<span class="checkbox-btn">广告</span>'+
+                '<span class="checkbox-btn">造谣</span>'+
+                '<span class="checkbox-btn-act">侵权</span>'+
+                '<span class="checkbox-btn">色情</span>'+
+                '</div>'+
+                '<textarea class="explanation-textarea"></textarea>'+
+                
+                '<span class="commit-btn">提交</span>'
+                '</div>';
+        var tpl4 = '<div class="invitation-layer-wrap">'+
+                '<div class="layer-close-btn invitation-layer-close-btn"></div>'+
+                '<span class="title">邀请好友加入“车知小组”问答圈</span>'+
+                '<div class="invitation-input-item-wrap">'+
+                '<span class="label">邀请链接：</span>'+
+                '<input type="text" class="invitation-input">'+
+                '<span class="invitation-copy-btn border border-all ">复制</span>'+
+                '<span class="invitation-tip">被邀请用户访问邀请链接，登录并完成问卷即可开通功能</span>'+
+                '</div>'+
+                '<div class="invitation-input-item-wrap">'+
+                '<span class="label">邀请链接：</span>'+
+                '<input type="text" class="invitation-input">'+
+                '<span class="invitation-copy-btn border border-all ">复制</span>'+
+                '<span class="invitation-tip">被邀请用户访问邀请链接，登录并完成问卷即可开通功能</span>'+
+                '</div>'+
+               
+                '<span class="commit-btn">提交</span>'
+                '</div>';
+        
+         var askLayer =  layer.open({
             type: 1,
             title: false,
             closeBtn: 0,
             shadeClose: false,
-              area:[735,200],
+           area:['735px','360px'],
             skin: 'layer-wrapper',
-            content: tpl2
+            content: tpl4
         });
-       
     </script>
 </html>

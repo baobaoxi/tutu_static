@@ -119,7 +119,7 @@ Register = {
                 $(element).valid();
             },
             errorPlacement: function (error, element) {
-                error.appendTo(element.parent()).css({'color': '#C00', 'padding-top': '5px'});
+                error.appendTo(element.parent()).css({'color': '#C00', 'display': 'table-footer-group'});
             },
             event: 'blur',
             rules: {
@@ -168,7 +168,7 @@ Register = {
                 };
 
                 //提交数据
-                BTF.post('User_Register/Post/', postArr, function (data) {
+                BTF.post('User_Register/Post', postArr, function (data) {
 
                     if (data.rtn == 1) {
                         window.location.href = data.backUrl;

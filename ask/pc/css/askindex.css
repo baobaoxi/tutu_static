@@ -113,6 +113,23 @@
 }
 .wrap-main .ask-item{
 	padding:  26px 0;
+    position: relative;
+}
+.wrap-main .ask-item .author-user{
+    position: absolute;
+    top: 26px;
+    right: 0;
+}
+.wrap-main .ask-item .author-user img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.wrap-main .ask-item .title{
+   display: block;
+}
+.wrap-main .ask-item .desc{
+    margin: 10px 0;
 }
 .wrap-main .ask-item .ask-vote-box{
 	width: 60px;
@@ -159,32 +176,44 @@
 .wrap-main .ask-item .ask-item-right{
 	margin-left: 80px;
 }
-.wrap-main .ask-item .ask-item-right .ask-info{
+.wrap-main .ask-item .ask-info{
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom{
+.wrap-main .ask-item .ask-info img{
+    max-width: 100% !important;
+    height: auto !important;
+}
+.wrap-main .ask-item  .ask-info p{
+    display: inline;
+     margin: 10px 0;
+}
+
+.wrap-main .ask-item .ask-item-bottom{
 	color: #999;
+    margin-top: 15px;
 	font-size: 16px;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom span{
+.wrap-main .ask-item .ask-item-bottom span{
 	margin-right:24px;
+    color: #999;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom a{
+.wrap-main .ask-item .ask-item-bottom a{
     margin-right:24px;
+    color: #999;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom .ask-item-num,.ask-item-share,.ask-item-report {
+.wrap-main .ask-item  .ask-item-bottom .ask-item-num,.ask-item-share,.ask-item-report {
 	cursor: pointer;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom span.ask-item-num span{
+.wrap-main .ask-item .ask-item-bottom span.ask-item-num span{
 	color: #cc0000;
 	margin:0;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom span.ask-item-num a{
+.wrap-main .ask-item .ask-item-bottom span.ask-item-num a{
     color: #cc0000;
 	margin:0;
 }
-.wrap-main .ask-item .ask-item-right .ask-item-bottom span.ask-item-delete,span.ask-item-edit{
+.wrap-main .ask-item .ask-item-bottom span.ask-item-delete,span.ask-item-edit{
     color: #c00;
     cursor: pointer;
 }

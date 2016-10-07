@@ -15,12 +15,27 @@ askMy = {
     //事件绑定
     bindEvent: function () {
         var obj = this;
-
         //删除
         obj.cfg.delBtn.live('click', function (e) {
             var self = $(this);
 
             e.preventDefault(), obj.del(self);
+        });
+        //编辑问题
+        $('#J_List .icon-toask').live('click', function (e) {
+            var self = $(this),
+                item = self.closest('div[name="item"]'),
+                id = self.attr('data-id'),
+                isAnony = parseInt(self.attr('data-isAnony')),
+                title = item.find('.title').html(),
+                content = item.find('[data-show-id="' + id + '"]').html();
+
+            //匿名
+            if (isAnony) {
+                $('#J_QuestionAnony').addClass('icon-anonymous-act');
+            }
+                
+            $('#J_Title').val(title || ''), $('#J_QuestionEditor').html(content || ''), e.preventDefault();
         });
         //加载更多
         obj.cfg.loadMore.live('click', function (e) {
@@ -42,10 +57,10 @@ askMy = {
                     
                     layer.msg('删除成功!', {icon: 1, 'time': 800, 'shade': 0.3});
                 } else {
-                    layer.msg('删除失败!', {icon: 1, 'time': 1500, 'shade': 0.3});
+                    layer.msg('删除失败!', {icon: 2, 'time': 1500, 'shade': 0.3});
                 }
             }, function (error_no, error_msg) {
-                layer.msg(error_msg, {icon: 1, 'time': 1500, 'shade': 0.3});
+                layer.msg(error_msg, {icon: 2, 'time': 1500, 'shade': 0.3});
             });
 
             layer.close(index);
@@ -59,9 +74,9 @@ askMy = {
             type = obj.cfg.loadMore.attr('data-type');
         
         //是否回答
-        var isDraft = (type == 'draft') ? !0 : !1;
-        //是否回答
         var isAnswer = (type == 'answer') ? !0 : !1;
+        //是否草稿
+        var isDraft = (type == 'draft') ? !0 : !1;
 
         var className = isDraft ? 'draft' : 'ask';
 
@@ -78,51 +93,75 @@ askMy = {
                     //内容
                     var content = ele.content;
                     //问题ID
-                    var questionId = (type == 'answer') ? ele.question_id : ele.id;
+                    var questionId = (type != 'question') ? ele.question_id : ele.id;
 
-                    if (isAnswer) {
+                    if (!isDraft) {
                         //统计数据
-                        if (typeof(data.statistics[questionId]) != 'undefined') {
-                            var statistics  = data.statistics[questionId];
+                        if (typeof(data.statistics) != 'undefined') {
+                            var statistics  = data.statistics[ele.id];
                         }
-                        //回复数
-                        var answerNum   = (typeof (statistics) != 'undefined' && statistics.answers) ? parseInt(statistics.answers) : 0;
-                        //赞
-                        var upNum       = (typeof (statistics) != 'undefined' && statistics.up) ? parseInt(statistics.up) : 0;
                     }
                     //菜单
                     if (type == 'draft') { //草稿
-                        buttonHtml += '<a target="_blank" href="/question/' + questionId + '#J_EditorPos" class="' + className + '-item-edit">编辑</a>' +
+                        buttonHtml += '<span class="' + className + '-item-delete J_Del" data-id="' + ele.id + '" data-type="' + type + '">删除</span>' +
+                                      '<a target="_blank" href="/question/' + questionId + '#J_EditorPos" class="' + className + '-item-edit">编辑</a>' +
                                       '<span class="' + className + '-item-date">' + ele.createDate + '</span>';
                     }
-                    if (type == 'question' || type == 'answer') { //问题和回答
-                        //编辑buttonHTML
-                        var editBtnHtml = type == 'question' ? '<span class="' + className + '-item-edit">编辑</span>' : '<a target="_blank" href="/question/' + questionId + '?answer_id=' + ele.id + '" class="' + className + '-item-edit">编辑</a>';
-                        //回答数HTML
-                        var answerNumHtml = answerNum ? '<span class="' + className + '-item-num">' + answerNum + '条评论</span>' : '';
-                        //更新时间HTML
-                        var updateDateHtml = ele.updateDate ? '<span class="' + className + '-item-update">更新时间' + ele.updateDate.substr(0, 10) + '</span>' : '';
+                    if (type == 'question') { //问题
+                        var answerNum = 0, attentionNum = 0;
+                        if (typeof (statistics) != 'undefined') {
+                            //回答数
+                            answerNum = parseInt(statistics.answers);
+                            //关注数
+                            attentionNum = parseInt(statistics.attention);
+                        }
+
+                        buttonHtml += '<span class="' + className + '-item-edit icon-toask" data-autosave="0" data-id="' + ele.id + '" data-isAnony="' + ele.is_anony + '">编辑</span>' +
+                                      '<span class="' + className + '-item-date">发布时间 ' + ele.createDate + '</span>' +
+                                      '<span class="' + className + '-item-num">' + (answerNum ? '回答数' + answerNum : '暂无回答') + '</span>' +
+                                      '<span class="' + className + '-item-num">' + (attentionNum ? '关注人数' + attentionNum : '暂无关注') + '</span>';
+                    }
+                    if (type == 'answer') { //回答
+                        var upNum = 0,commentNum = 0;
+                        if (typeof (statistics) != 'undefined') {
+                            //点赞数
+                            upNum = parseInt(statistics.up);
+                            //评论数
+                            commentNum = parseInt(statistics.comments);
+                        }
                         
-                        buttonHtml += editBtnHtml + answerNumHtml + '<span class="' + className + '-item-date">发布时间' + ele.createDate.substr(0, 10) + '</span>' + updateDateHtml;
+                        buttonHtml += '<span class="' + className + '-item-delete J_Del" data-id="' + ele.id + '" data-type="' + type + '">删除</span>' +
+                                      '<a target="_blank" href="/question/' + questionId + '?answer_id=' + ele.id + '&act=edit#goEdit" class="' + className + '-item-edit">编辑</a>' +
+                                      '<span class="' + className + '-item-num J_CommentShow" data-id="' + ele.id + '">' + (commentNum ? commentNum + '条' : '暂无') + '评论</span>' +
+                                      '<span class="' + className + '-item-date">创建时间 ' + ele.createDate + '</span>' +
+                                      (ele.updateDate ? '<span class="' + className + '-item-date">更新时间 ' + ele.updateDate + '</span>' : '');
                     }
                     
                     //内容HTML
-                    var contentHtml = content.showContent ? '<p class="ask-info desc" data-hide-id="' + questionId + '">' + content.showContent + '...<span class="ask-info-all" data-dom="show_askinfo_all" data-id="' + questionId + '">[查看全部]</span></p><p class="ask-info desc hide" data-show-id="' + questionId + '">' + content.content + '</p>' : '<p class="ask-info desc">' + content.content + '</p>';
+                    var contentHtml = content.showContent ? '<div class="ask-info desc" data-hide-id="' + ele.id + '">' + content.showContent + '...<span class="ask-info-all" data-dom="show_askinfo_all" data-id="' + ele.id + '">[查看完整回答]</span></div><div class="ask-info desc hide" data-show-id="' + ele.id + '">' + content.content + '</div>' : '<div class="ask-info desc">' + content.content + '</div>';
                     //点赞模块
-                    var upHtml = isAnswer ? '<div class="ask-vote-box ask-vote-box-act border border-all"><span class="ask-vote-num">' + (upNum ? upNum : '') + '</span><span class="ask-vote-icon"></span></div>' : '';
-
+                    var upHtml = isAnswer ? '<div class="ask-vote-box ask-vote-box-act border border-all"><span class="ask-vote-num">' + (upNum || 0) + '</span><span class="ask-vote-icon"></span></div>' : '';
+                    //评论列表针对回答
+                    var commentList = (type == 'answer') ?
+                                        '<div id="J_CommentPart_' + ele.id + '" class="comment-wrap border border-all hide J_CommentPart" data-id="' + ele.id + '">' +
+                                            '<span class="comment-arrow"></span><div class="comment-list" id="J_CommentList_' + ele.id + '" ></div><div class="comment-page hide J_PageBar"></div>' +
+                                            '<span class="comment-list-up border border-top J_CommentClose" data-id="' + ele.id + '">' +
+                                                '<span class="arrow-up-xl-gray"></span>点击收起' +
+                                            '</span>' +
+                                        '</div>': '';
+                                        
                     itemHtml +='<div name="item" class="' + className + '-item border border-bottom">' +
-                                    //针对非草稿 点赞数
+                                    //点赞针对回答
                                     upHtml +
-                                    '<div class="' + className + '-item-right">' +
+                                    '<div class="' + className + '-item-right ' + ((type == 'question') ? 'un-margin-left' : '') + '">' +
                                         '<span class="' + className + '-title title">' + ele.title + '</span>' +
                                             //查看全部
                                             contentHtml +
                                         '<div class="' + className + '-item-bottom">' +
-                                            '<span class="' + className + '-item-delete J_Del" data-id="' + questionId + '" data-type="' + type + '">删除</span>' +
                                             //button
-                                            buttonHtml
+                                            buttonHtml +
                                         '</div>' +
+                                        commentList +
                                     '</div>' +
                                 '</div>';
                 });

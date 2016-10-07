@@ -18,7 +18,7 @@ var askIndexM = {
     //加载更多的相关处理
     getMore : function(obj){
         if(askIndexM.getMoreLock){
-            layer.msg('hold on!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
             return false;
         }
         askIndexM.getMoreLock = true;
@@ -41,6 +41,9 @@ var askIndexM = {
                 layer.msg(data.msg, {icon: 2, 'time': 1500, 'shade': 0.3});
                 _self.hide();
             }
+            if(data.isLastPage > 0){
+                _self.hide();
+            }
             askIndexM.getMoreLock = false;
             obj.children('.J_loadText').text('点击展开更多');
         },function(error_no,error_msg){
@@ -54,7 +57,7 @@ var askIndexM = {
 //点赞
 $(document).on('click','.J_up_btn',function(){
     if(!isLogin){
-        layer.msg('no login', {icon: 2, 'time': 1500, 'shade': 0.3});
+        layer.msg('请先登录!', {icon: 2, 'time': 1500, 'shade': 0.3});
         return false;
     }
     publicObj.doUp($(this));
@@ -63,7 +66,7 @@ $(document).on('click','.J_up_btn',function(){
 //关注
 $(document).on('click','.J_follow_btn',function(){
     if(!isLogin){
-        layer.msg('no login', {icon: 2, 'time': 1500, 'shade': 0.3});
+        layer.msg('请先登录!', {icon: 2, 'time': 1500, 'shade': 0.3});
         return false;
     }
     publicObj.doFollow($(this));
@@ -72,7 +75,7 @@ $(document).on('click','.J_follow_btn',function(){
 //举报弹出
 $(document).on('click','.J_report_btn',function(){
     if(!isLogin){
-        layer.msg('no login', {icon: 2, 'time': 1500, 'shade': 0.3});
+        layer.msg('请先登录!', {icon: 2, 'time': 1500, 'shade': 0.3});
         return false;
     }
     askUtil.renderReportLayer();
@@ -82,7 +85,7 @@ $(document).on('click','.J_report_btn',function(){
 //举报提交
 $(document).on('click','#J_report_submit',function(){
     if(!isLogin){
-        layer.msg('no login', {icon: 2, 'time': 1500, 'shade': 0.3});
+        layer.msg('请先登录!', {icon: 2, 'time': 1500, 'shade': 0.3});
         return false;
     }
     publicObj.doReport($(this));

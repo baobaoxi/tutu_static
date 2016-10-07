@@ -16,7 +16,15 @@
 .wrap-main .draft-item .draft-item-right .draft-item-bottom span{
 	margin-right:24px;
 }
-.wrap-main .draft-item .draft-item-right .draft-item-bottom span.draft-item-delete,span.draft-item-edit {
+.wrap-main .draft-item .draft-item-right .draft-item-bottom a{
+	margin-right:24px;
+}
+.wrap-main .draft-item .draft-item-right .draft-item-bottom span.draft-item-delete {
+	cursor: pointer;
+	color: #c00;
+}
+
+.wrap-main .draft-item .draft-item-right .draft-item-bottom .draft-item-edit {
 	cursor: pointer;
 	color: #c00;
 }

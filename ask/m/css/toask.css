@@ -1,0 +1,38 @@
+.toask-wrap{
+    padding: 6px 12px;
+}
+.toask-wrap .to-ask-title{
+    display: block;
+    font-size: 14px;
+    height:32px;
+    line-height: 32px;
+}
+.toask-wrap  .to-ask-main-text{
+    height: 85px;
+    padding: 5px; 
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 15px;
+}
+.toask-wrap .to-ask-title .anonymous{
+       font-size: 12px;
+    background: url(./../img/icon_anonymous.png)no-repeat;
+    padding-left: 26px;
+    background-size: 25px auto;
+    display: inline-block;
+    float: right;
+    background-position-y: 4px;
+}
+.toask-wrap .to-ask-title  .anonymous-act{
+    background: url(./../img/icon_anonymous_act.png)no-repeat;
+    background-size: 25px auto;
+    background-position-y: 4px;
+}
+.toask-wrap  .to-ask-sub-text{
+    height: 125px;
+    width: 100%;
+    padding: 5px; 
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+}

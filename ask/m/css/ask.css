@@ -1,0 +1,88 @@
+.ask-wrap{
+    height: 40px;
+    line-height: 40px;
+    background: #f0f0f0;
+}
+.ask-wrap .nav-li{
+    font-size: 14px;
+    padding: 0 12px;
+}
+.ask-wrap .nav-li-act{
+    color: #c00;
+}
+.ask-wrap .to-ask{
+    font-size: 14px;
+    float: right;
+    padding-right: 20px;
+    background: url(./../img/icon_double_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y: 12px;
+    background-size: 18px auto;
+    margin-right: 10px;
+}
+
+.ask-wrap .ask-list{
+    
+}
+.ask-wrap .ask-list .ask-item{
+    padding: 12px;
+    display: block;
+}
+.ask-wrap .ask-list .ask-item .title{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+.ask-wrap .ask-list .ask-item .user-info{
+    font-size: 12px;
+    line-height: 24px;
+    display: block;
+}
+.ask-wrap .ask-list .ask-item .user-info span{
+    color: #2374e2;
+    margin: 0 2px;
+}
+.ask-wrap .ask-list .ask-item .ask-desc{
+    font-size: 12px;
+    line-height: 20px;
+
+        display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info .agree,.comment,.date,.follow{
+    line-height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info .comment span{
+    margin-right: 3px;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info .agree span{
+    margin-right: 3px;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info .answer span{
+    margin-right: 3px;
+}
+.ask-wrap .ask-list .ask-item .ask-bottom-info .follow span {
+    margin-right: 3px;
+}
+
+.ask-wrap .ask-list .ask-item .ask-bottom-info .ask-more{
+    float: right;
+    background: url(./../img/icon_ask_item_more.png) no-repeat;
+    width: 32px;
+    background-size: 32px auto;
+    display: inline-block;
+    height: 22px;
+    margin-top: 6px;
+}

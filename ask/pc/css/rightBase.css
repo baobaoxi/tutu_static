@@ -118,6 +118,9 @@
     color: #34547c;
     font-size: 16px;
 }
+.right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item  .user-name a{
+    color: #34547c;
+}
 .right-wrap  .ask-users-rank-wrap .ranks-wrap .rank-item  .user-info{
 	color: #999;
 	margin-top: 5px;
@@ -160,10 +163,12 @@
 .right-wrap .follow-ask-users-wrap .users-wrap .follow-user-item{
 	width: 40px;
 	height: 40px;
+    cursor: pointer;
+    position: relative;
 	margin: 6px;
 	float: left;
 }
-.right-wrap .follow-ask-users-wrap .users-wrap .follow-user-item img{
+.right-wrap .follow-ask-users-wrap .users-wrap .follow-user-item img.user-avatar{
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
@@ -174,6 +179,7 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    cursor: pointer;
     background: #eee;
     line-height: 40px;
 

@@ -16,6 +16,7 @@
 }
 .wrap-main .follow-item .follow-item-right .follow-item-bottom span{
 	margin-right:24px;
+    cursor: pointer;
 }
 .wrap-main .follow-item .follow-item-right .follow-item-bottom span.follow-item-num,span.follow-item-share,span.follow-item-report {
 	cursor: pointer;

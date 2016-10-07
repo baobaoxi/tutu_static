@@ -6,23 +6,150 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<script type="text/javascript" src="./../tutu_static/ask/pc/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="./../tutu_static_demo/ask/pc/js/common/jquery.min.js"></script>
 
-<script type="text/javascript" src="./../tutu_static/ask/pc/layer/layer.js"></script>
-<link rel="stylesheet" href ="./../tutu_static/ask/pc/layer/skin/layer.css">
-<link rel="stylesheet" href ="./../tutu_static/ask/pc/css/base.css">
+<script type="text/javascript" src="./../tutu_static_demo/ask/pc/layer/layer.js"></script>
+<script type="text/javascript" src="./../tutu_static/ask/pc/js/common/shareui.js"></script>
+<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/layer/skin/layer.css">
+<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/css/base.css">
 <link rel="stylesheet" href ="./../tutu_static/ask/pc/css/layer.css">
-       <link rel="stylesheet" href ="./../tutu_static/ask/pc/css/rightBase.css">
-<link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/css/article.css">
-     <link rel="stylesheet" href ="./../tutu_static_demo/ask/pc/css/commentBase.css">  
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/xeditor/xheditor-1.2.2.min.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/xeditor/xheditor_lang/zh-cn.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/umeditor.config.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/umeditor.js"></script>
+        <script type="text/javascript" src="./../tutu_static_demo/ask/pc/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+<link rel="stylesheet" href ="./../tutu_static/ask/pc/umeditor/themes/default/css/umeditor.css">
     
 <title>New HMTL document by NewJect</title>
 
 </head>
 <body>
-    <span class="user user-info" data-dom="userDialog"></span>
+    <div class="" data-dom="share" data-sharetitle="测试title" data-sharecontext="测试context" data-shareurl="" data-shareimg="">点我分享</div>
+
+<div>
+
+</div>
+
 </body>
-    <script> 
+    <script  type="text/javascript" >
+        var tpl = '<div class="ask-layer-wrap">'+
+                '<div class="layer-close-btn"></div>'+
+                '<span class="title">请填写你的基本信息</span>'+
+                '<div class="basic-info-wrap">'+
+                '<div class="info-item">'+
+                '<span class="info-span">城市</span>'+
+                '<input type="text" class="info-input">'+
+                '</div>'+
+                '<div class="info-item">'+
+                '<span class="info-span">行业</span>'+
+                '<input type="text" class="info-input">'+
+                '</div>'+
+                '<div class="info-item">'+
+                '<span class="info-span">性别</span>'+
+                
+                '<span class="sex-select-label"><span class="sex-select-text">保密</span><span class="select-icon"></span>'+
+                '<ul class="select-ul">'+
+                '<li class="select-li" data-value="0">保密</li>'+
+                '<li class="select-li" data-value="1">男</li>'+
+                '<li class="select-li" data-value="2">女</li>'+
+                '</ul></span>'+
+                '</div>'+
+                '</div>'+
+                '<div class="flayer-bottom">'+
+                '<span class="commit-btn">确定</span>'+
+                '<span class="cancel-btn">取消</span>'+
+                '</div>'+      
+        '</div>';
+        var tpl2 = '<div class="ask-layer-wrap">'+
+                '<div class="layer-close-btn"></div>'+
+                '<span class="title">请填写你的职业信息</span>'+
+                '<div class="occupation-info-wrap">'+
+                '<textarea class="occupation-text"></textarea>'+
+                 '<span class="tag-tips">例如：汽车从业人士，不要超过八个汉字</span>'+
+                '</div>'+
+                '<div class="flayer-bottom">'+
+                '<span class="commit-btn">确定</span>'+
+                '<span class="cancel-btn">取消</span>'+
+                '</div>'+      
+        '</div>';
+        var tpl3 = '<div class="ask-layer-wrap">'+
+                '<div class="layer-close-btn"></div>'+
+                '<span class="title">请用3个词描述你的兴趣</span>'+
+                '<div class="tag-info-wrap">'+
+                '<input type="text" class="tag-input">'+
+                '<input type="text" class="tag-input">'+
+                '<input type="text" class="tag-input">'+
+                '<span class="tag-tips">例如：奔驰车  改装粉  网球爱好者</span>'+
+                '</div>'+
+                '<div class="flayer-bottom">'+
+                '<span class="commit-btn">确定</span>'+
+                '<span class="cancel-btn">取消</span>'+
+                '</div>'+      
+        '</div>';
+       var tpl4 = '<div class="ask-layer-wrap">'+
+                '<div class="layer-close-btn"></div>'+
+                '<span class="title">用一句话介绍自己</span>'+
+                '<div class="desc-info-wrap">'+
+                '<textarea class="desc-text"></textarea>'+
+                 '<span class="tag-tips">例如：汽车从业人士，不要超过八个汉字</span>'+
+                '</div>'+
+                '<div class="flayer-bottom">'+
+                '<span class="commit-btn">确定</span>'+
+                '<span class="cancel-btn">取消</span>'+
+                '</div>'+      
+        '</div>';
+      
         
+//         var askLayer =  layer.open({
+//            type: 1,
+//            title: false,
+//            closeBtn: 0,
+//            shadeClose: false,
+//           area:['460px','300px'],
+//            skin: 'layer-wrapper',
+//            content: tpl
+//        });
+//        var askLayer =  layer.open({
+//            type: 1,
+//            title: false,
+//            closeBtn: 0,
+//            shadeClose: false,
+//           area:['460px','290px'],
+//            skin: 'layer-wrapper',
+//            content: tpl2
+//        });
+//         var askLayer =  layer.open({
+//            type: 1,
+//            title: false,
+//            closeBtn: 0,
+//            shadeClose: false,
+//           area:['460px','290px'],
+//            skin: 'layer-wrapper',
+//            content: tpl4
+//        });
+//         var askLayer =  layer.open({
+//            type: 1,
+//            title: false,
+//            closeBtn: 0,
+//            shadeClose: false,
+//           area:['460px','235px'],
+//            skin: 'layer-wrapper',
+//            content: tpl3
+//        });
+//        var changeSex = function(){
+//            $('.sex-select-label').on('click',function(){
+//                $(this).find('.select-ul').show();
+//            })
+//            $('.sex-select-label').find('.select-ul .select-li').on('click',function(){
+//                
+//                $('.sex-select-label').find('.select-ul').hide();
+////                $('.sex-select-label').data('value',$(this).data('value')) 
+//                $('.sex-select-label').find('.sex-select-text').html($(this).html());
+//                
+//               
+//            })
+//        }
+//        changeSex();
     </script>
 </html>

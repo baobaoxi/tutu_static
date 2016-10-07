@@ -1,4 +1,5 @@
 var askUtil = {
+    isAuto : 0,
 	showAll: function(){
 		$('.wrapper').on('click','[data-dom="show_askinfo_all"]',function(){
 			var slef = $(this);
@@ -20,7 +21,7 @@ var askUtil = {
 		});
     },
     renderAskLayer: function($btn){
-
+       var _this = this;
        var render = function(){
             var tpl = '<div class="ask-layer-wrap J_Editor">'+
                 '<div class="layer-close-btn"></div>'+
@@ -32,8 +33,7 @@ var askUtil = {
                 '<div class="layer-bottom">'+
                 '<span class="bottom-item icon-emote J_Emote">表情</span>'+
                 '<span class="bottom-item icon-img J_Image">图片</span>'+
-                '<span class="bottom-item icon-play J_Play ">视频</span>'+
-                '<span class="bottom-item icon-anonymous J_Anony" >匿名发布</span>'+
+                '<span id="J_QuestionAnony" class="bottom-item icon-anonymous J_CheckBox" >匿名发布</span>'+
                 '</div>'+
                 '<span class="commit-btn" id="J_SaveQuestion">发布</span>'+
             '</div>';
@@ -47,16 +47,27 @@ var askUtil = {
                 content: tpl,
                 success:function(){
                     tutuEditor.init('J_QuestionEditor');
+                    var  titleKey  = "user-question-title",conKey = "user-question-content";
+                    $('#J_Title').val(tutuEditor.getStorage(titleKey));
+                    var  con  = tutuEditor.getStorage(conKey);
+                    con != null && tutuEditor.getEditorObj('J_QuestionEditor') && tutuEditor.getEditorObj('J_QuestionEditor').setContent(con);
+                    
                 }
             });
             $('.layer-close-btn').on('click',function(){
                 layer.close(askLayer);
             });
         };
-        $($btn).on('click',function(){
+        $(document).on('click',$btn,function(){
+            _this.isAutoSave = $(this).attr('data-autosave');
+            if(_this.isAutoSave == '0' ){
+                tutuEditor.stopStorage(false);
+            }else{
+                tutuEditor.stopStorage(true);
+            }
             render();
         });
-        this.saveQuestion();
+        _this.initSaveQuestion();
         
     },
     renderUploadLayer: function(){
@@ -145,23 +156,47 @@ var askUtil = {
             title: false,
             closeBtn: 0,
             shadeClose: false,
-           area:['735px','360px'],
+            area:['735px','360px'],
             skin: 'layer-wrapper',
             content: tpl
         });
     },
     //发布问题
-    saveQuestion:function(){  
+    initSaveQuestion:function(){  
+            if(typeof tutuEditor =='undefined'){
+                return false;
+            }
+            var  titleKey  = "user-question-title",conKey = "user-question-content";
+            $(document).on('keyup','#J_Title',function(){
+                    tutuEditor.setStorage(titleKey,$(this).val());
+            });
+            var oldContent = '';
+            var t  =  setInterval(function(){
+                if(tutuEditor.getEditorObj('J_QuestionEditor')){
+                    var c  = tutuEditor.getEditorObj('J_QuestionEditor').getContent();
+                    if(c!=oldContent){
+                        tutuEditor.setStorage(conKey,c);
+                    }
+                    oldContent = c;
+                }
+            },5000);
+            
             $(document).on('click','#J_SaveQuestion',function(){
+                clearInterval(t);
                 tutuEditor.setCurEditor('J_QuestionEditor');
-                var  title   =  $('#J_Title').val(),content  = tutuEditor.getContent();
-                    
+                var  title   =  $('#J_Title').val(),content  = tutuEditor.getContent(); 
                     if(title == '' || $.trim(title) == ''){
                         dialog.msg('填写的问题不能为空');
                         return false;
-                    }                
-                    BTF.post("Question/SaveQuestion","title="+title+"&content="+content,function(data){
+                    }  
+                    var  isAnony  =  0;
+                    if($('#J_QuestionAnony').hasClass('icon-anonymous-act')){
+                            isAnony  = 1;
+                    }
+                    BTF.post("Question/SaveQuestion","title="+title+"&content="+content+'&is_anony='+isAnony,function(data){
                             if(data.state == 1){
+                                tutuEditor.clearStorage(titleKey);
+                                tutuEditor.clearStorage(conKey);
                                 dialog.ok(data.msg,function(){
                                     location =  document.URL;
                                     layer.closeAll();
@@ -183,5 +218,47 @@ var askUtil = {
             var self = $(this);
             $(self).find(flayer).animate({top:top+"px"});
         });
+    },
+    renderSearch:function(){
+        var tpl = ' <div class="search-dialog-bg">'+
+        '<div class="search-input-wrap">'+
+            '<input type="text" class="search-input" placeholder="输入你感兴趣的词">'+
+            '<span class="search-btn"></span>'+
+        '</div>'+
+        '<div class="search-hot-wrap">'+
+            '<span class="search-hot-title">热门搜索</span>'+
+            '<span class="search-hot-tip">suv</span>'+
+            '<span class="search-hot-tip">汽车测评</span>'+
+            '<span class="search-hot-tip">质量报告</span>'+
+            '<span class="search-hot-tip">智能汽车</span>'+
+            '<span class="search-hot-tip">国产suv改装</span>'+
+            '<span class="search-hot-tip">自动驾驶</span>'+
+            '<span class="search-hot-tip">啊啊啊</span>'+
+        '</div>'+
+    '</div>';
+        $('body').append(tpl);
+    },
+    renderSearch:function(){
+        var tpl = ' <div class="search-dialog-bg">'+
+            '<span class="search-dialog-close-btn"></span>'+
+        '<div class="search-input-wrap">'+
+            '<input type="text" class="search-input" placeholder="输入你感兴趣的词">'+
+            '<span class="search-btn"></span>'+
+        '</div>'+
+        '<div class="search-hot-wrap">'+
+            '<span class="search-hot-title">热门搜索</span>'+
+            '<span class="search-hot-tip">suv</span>'+
+            '<span class="search-hot-tip">汽车测评</span>'+
+            '<span class="search-hot-tip">质量报告</span>'+
+            '<span class="search-hot-tip">智能汽车</span>'+
+            '<span class="search-hot-tip">国产suv改装</span>'+
+            '<span class="search-hot-tip">自动驾驶</span>'+
+            '<span class="search-hot-tip">啊啊啊</span>'+
+        '</div>'+
+    '</div>';
+        $('body').append(tpl);
+        $('.search-dialog-close-btn').on('click',function(){
+            $('.search-dialog-bg').remove();
+        })
     }
 };

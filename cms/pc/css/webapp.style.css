@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 
 .label,sub,sup {
@@ -12715,7 +12714,7 @@ html {
     background-attachment: fixed
 }
 
-*,body,html {
+*,body,html{
     padding: 0;
     margin: 0;
     font-size: 12px;

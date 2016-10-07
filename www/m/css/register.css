@@ -1,0 +1,77 @@
+.register-wrap{
+    padding: 22px 12px;
+    
+}
+.register-wrap .register-main-wrap{
+    
+}
+.register-wrap .register-main-wrap .register-name{
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: url(./../img/icon/icon_login_name.jpg) no-repeat right;
+    background-size: 33px 30px;
+    border-radius: 3px;
+    margin-top: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.register-wrap .register-main-wrap .register-password{
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: url(./../img/icon/icon_login_pwd.jpg) no-repeat right;
+    background-size: 33px 30px;
+    border-radius: 3px;
+    margin-top: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.register-wrap .code-wrap{
+    height: 40px;
+    margin-top: 15px;
+}
+.register-wrap .code-wrap .code-input{
+    height: 40px;
+    width: calc( 100% - 120px);
+    float: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+}
+
+
+.register-wrap .code-wrap .code-btn{
+    width: 100px;   
+    height: 40px;
+    background: #c0c0c0;
+    float: right;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+}
+.register-wrap .code-wrap .code-btn-act{
+    background: #c00;
+    color: #fff;
+}
+.register-wrap .register-main-wrap  .register-btn{
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: #c0c0c0;
+    color: #333;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 44px;
+}
+.register-wrap .register-main-wrap .register-btn-act{
+    background: #c00;
+    color: #fff;
+}

@@ -51,3 +51,9 @@
 	color: #cc0000;
 	margin:0;
 }
+.wrap-main .ask-item .comment-wrap{
+    margin-left: 0;
+}
+.wrap-main .ask-item .comment-wrap .comment-arrow{
+    left: 125px;
+}

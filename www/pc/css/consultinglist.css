@@ -76,6 +76,10 @@
     margin-top: 20px;
     margin-bottom: 18px;
 }
+.consulting-list-wrap .list-wrap .list-item .consulting-info  .title em{
+    color: #c00;
+    font-style: normal;
+}
 .consulting-list-wrap .list-wrap .list-item .consulting-info .short-desc{
     font-size: 14px;
     color: #666;
@@ -86,6 +90,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.consulting-list-wrap .list-wrap .list-item .consulting-info .short-desc em{
+    color: #c00;
+    font-style: normal;
 }
 .consulting-list-wrap .list-wrap .list-item .consulting-info  .consulting-info-bottom{
     position: absolute;

@@ -1,0 +1,55 @@
+.article-wrap{
+    padding:  12px;
+    background: #fff;
+}
+.article-wrap .article-title{
+    line-height: 30px;
+    color: #333;
+    font-size: 18px;
+}
+.article-wrap .article-detail p{
+    line-height: 20px;
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0 ;
+}
+.article-wrap .article-detail img{
+    max-width: 100%;
+    height: auto;
+}
+.article-wrap .article-info-bottom{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+    
+}
+.article-operation-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 42px;
+    padding: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.article-operation-bottom span{
+    display: inline-block;
+    width: 33%;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.article-operation-bottom a{
+     display: inline-block;
+    width: 33%;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    text-align: center;
+}

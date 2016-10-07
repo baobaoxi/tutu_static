@@ -1,0 +1,367 @@
+body{
+    background: #efefee;
+}
+.article-wrap{
+    padding:  12px;
+    background: #fff;
+}
+.article-wrap .article-title{
+    line-height: 24px;
+    color: #333;
+    font-size: 18px;
+}
+.article-wrap .article-info-wrap{
+    height: 25px;
+    margin: 10px 0;
+}
+.article-wrap .article-info-wrap .user-avatar{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #666;
+    float: left;
+    margin-right: 10px;
+}
+.article-wrap .article-info-wrap .user-name{
+    line-height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+.article-wrap .article-info-wrap .date{
+    line-height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+.article-wrap .article-info-wrap .vote-num{
+     background: url(./../img/icon/icon_vote.png) no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    background-size: 20px auto;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin-right: 10px;
+    background-position: 0 2px;
+}
+.article-wrap .article-info-wrap .comment-num{
+     background: url(./../img/icon/icon_comment.png) no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    background-size: 20px auto;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin-right: 10px;
+    background-position: 0 2px;
+}
+.article-wrap .article-detail p{
+    line-height: 20px;
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0 ;
+}
+.article-wrap .article-detail img{
+    max-width: 100%;
+    height: auto;
+}
+.article-wrap .article-vote-btn{
+    width: 146px;
+    height: 34px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #c00;
+    color: #c00;
+    text-align: center;
+    line-height: 34px;
+}
+.article-wrap .article-vote-btn .vote-icon{
+    background: url(./../img/icon/icon_article_vote.jpg) no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    padding-left: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+.article-wrap .article-vote-btn-act{
+     background: #c00;
+    color: #fff;
+}
+.article-wrap .article-vote-btn-act .vote-icon{
+    background: url(./../img/icon/icon_article_vote_act.jpg) no-repeat;
+    background-size: 16px;
+   
+}
+.article-hot-list{
+    background: #fff;
+    margin-top: 10px;
+}
+.article-hot-list .article-list{
+    padding: 0 12px;
+}
+.article-hot-list .article-list .article-item{
+    padding: 15px 0;
+    height: 68px;
+}
+.article-hot-list .article-list .article-item .article-img{
+    width: 120px;
+    height: 68px;
+    float: left;
+}
+.article-hot-list .article-list .article-item .article-info{
+    margin-left: 130px;
+    position: relative;
+    height: 100%;
+}
+.article-hot-list .article-list .article-item .article-info .article-title{
+    font-size: 14px;
+    line-height: 20px;
+}
+.article-hot-list .article-list .article-item .article-info .article-info-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #666;
+    height: 16px;
+    line-height: 16px;
+    width: 100%;
+}
+.article-hot-list .article-list .article-item .article-info .article-info-bottom .user-name{
+    margin-right: 10px;
+}
+.article-hot-list .article-list .article-item .article-info .article-info-bottom  .vote-num{
+    background: url(./../img/icon/icon_vote.png) no-repeat;
+    padding-left: 18px;
+    line-height: 16px;
+    background-size: 20px 16px;
+    display: inline-block;
+    margin-right: 10px;
+    float: right;
+}
+.article-hot-list .article-list .article-item .article-info .article-info-bottom  .comment-num{
+    background: url(./../img/icon/icon_comment.png) no-repeat;
+    padding-left: 18px;
+    line-height: 16px;
+    background-size: 20px 16px;
+    float: right;
+    
+    display: inline-block; 
+}
+.article-hot-comment-wrap{
+    background: #fff;
+    margin-top: 10px;
+}
+
+.article-hot-comment-wrap .comment-list-wrap{
+    padding: 0 12px;
+    padding-bottom: 10px;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item{
+    padding-bottom: 10px;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item .top-info{
+    margin: 5px 0;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item .top-info .user-avatar{
+    height: 30px;
+    width: 30px;
+    float: left;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item .top-info .user-name{
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    display: inline-block;
+    float: left;
+    color: #666;
+    margin-right: 10px;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item .top-info  .vote-num{
+    
+     height: 30px;
+    float: left;
+    line-height: 30px;
+    display: inline-block;
+    background: url(./../img/icon/icon_vote.png) no-repeat;
+    background-position-y: 5px;
+    padding-left: 20px;
+    background-size: 20px  16px;
+    float: right;
+    color: #666;
+    margin-right: 10px;
+} 
+.article-hot-comment-wrap .comment-list-wrap .comment-item .top-info  .unvote-num{
+     height: 30px;
+    float: left;
+    line-height: 30px;
+    display: inline-block;
+    background: url(./../img/icon/icon_unvote.png) no-repeat;
+    background-position-y: 5px;
+    padding-left: 20px;
+    background-size: 20px  16px;
+    float: right;
+    color: #666;
+    margin-right: 10px;
+}
+.article-hot-comment-wrap .comment-list-wrap .comment-item .comment-desc{
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+}
+.article-hot-comment-wrap .logout-add-comment{
+    padding: 15px 12px;
+}
+.article-hot-comment-wrap .hot-comment-more{
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 100%;
+    color: #c00;
+    display: block;
+}
+.article-hot-comment-wrap .logout-add-comment .comment-login-btn{
+        height: 40px;
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background: #ffefab;
+}
+.article-hot-comment-wrap .login-add-comment{
+    padding: 15px 12px;
+}
+.article-hot-comment-wrap .login-add-comment .user-avatar{
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+}
+.article-hot-comment-wrap .login-add-comment .add-comment-box{
+    margin-left: 40px;
+}
+.article-hot-comment-wrap .login-add-comment .add-comment-box .add-comment{
+    width: 100%;
+    height: 88px;
+    border: 1px solid #e1e1e1;
+}
+.article-hot-comment-wrap .login-add-comment .add-comment-box .commit-btn{
+    float: right;
+    width: 90px;
+    height: 30px;
+    background: #c00;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 6px;
+    color: #fff;
+    text-align: center;
+}
+.article-bottom-share-wrap{
+    background: #fff;
+    padding: 5px 0;
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.article-bottom-share-wrap .comment-icon{
+    display: inline-block;
+    background: url('./../img/icon/icon_comment_bottom.jpg') no-repeat;
+    padding-left: 34px;
+    height: 34px;
+    width: 25%;
+    background-size: 33px; 
+    float: left;
+     box-sizing: border-box;
+    line-height: 34px;
+    text-align: left;
+}
+.article-bottom-share-wrap .vote-icon{
+     display: inline-block;
+    background: url('./../img/icon/icon_vote_bottom.png') no-repeat;
+    padding-left: 34px;
+    height: 34px;
+     float: left;
+    background-size: 33px; 
+    width: 25%;
+    box-sizing: border-box;
+    line-height: 34px;
+    text-align: left;
+}
+.article-bottom-share-wrap .vote-icon:active{
+     background: url('./../img/icon/icon_vote_bottom_red.png') no-repeat;
+     background-size: 33px; 
+}
+.article-bottom-share-wrap .heart-icon{
+    display: inline-block;
+    background: url('./../img/icon/icon_heart.png') no-repeat;
+    padding-left: 34px;
+    float: left;
+    height: 34px;
+    background-size: 33px; 
+    line-height: 34px;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: left;
+}
+.article-bottom-share-wrap  .share-icon{
+    display: inline-block;
+    background: url('./../img/icon/icon_share.png') no-repeat;
+    padding-left: 34px;
+    height: 34px;
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    background-size: 33px; 
+    text-align: left;
+    line-height: 34px;
+}
+.article-bottom-share-wrap .share-wrapper{
+    position: absolute;
+    bottom: 44px;
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+.article-bottom-share-wrap .share-wrapper .close-btn{
+    width: 30px;
+    height: 30px;
+    background: url(./../img/icon/close.jpg)no-repeat;
+    display: inline-block;
+    float: left;
+    background-size: 30px;
+    margin: 5px;
+}
+.article-bottom-share-wrap .share-wrapper .weibo{
+    width: 26px;
+    height: 26px;
+    background: url(./../img/icon/icon_weibo_bottom.png)no-repeat;
+    display: inline-block;
+    background-size:26px;
+    margin: 7px 10px;
+    float: right;
+}
+.article-bottom-share-wrap .share-wrapper .wechat{
+    width: 26px;
+    height: 26px;
+    background: url(./../img/icon/icon_wechat.png)no-repeat;
+    display: inline-block;
+    background-size:26px;
+    margin: 7px 10px;
+    float: right;
+}
+.article-bottom-share-wrap .share-wrapper .qq{
+     width: 26px;
+    height: 26px;
+    background: url(./../img/icon/icon_qq.png)no-repeat;
+    display: inline-block;
+    background-size:26px;
+    margin: 7px 10px;
+    float: right;
+}

@@ -1,0 +1,132 @@
+.login-wrap{
+    padding: 22px 12px;
+    
+}
+.login-wrap .login-main-wrap{
+    
+}
+.login-wrap .login-main-wrap .login-name{
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: url(./../img/icon/icon_login_name.jpg) no-repeat right;
+    background-size: 33px 30px;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    
+}
+.login-wrap .login-main-wrap .login-password{
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: url(./../img/icon/icon_login_pwd.jpg) no-repeat right;
+    background-size: 33px 30px;
+    border-radius: 3px;
+    margin-top: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.login-wrap .login-main-wrap  .login-find-box{
+    
+}
+.login-wrap .login-main-wrap  .login-find-box .remember-pwd{
+    padding-left: 18px;
+    background: url(./../img/icon/icon_checkbox.png) no-repeat;
+    height: 16px;
+    background-size: 16px;
+    display: inline-block;
+    line-height: 16px;
+    font-size: 12px;
+}
+.login-wrap .login-main-wrap  .login-find-box{
+    width: 100%;
+    height: 16px;
+    margin:15px 0;
+}
+.login-wrap .login-main-wrap  .login-find-box .find-pwd{
+    color: #2475e3;
+    float: right;
+    font-size: 12px;
+}
+.login-wrap .login-main-wrap  .login-btn{
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: #c00;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 44px;
+}
+.login-wrap .login-social{
+    margin-top: 12px;
+}
+.login-wrap .login-social .tips{
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.login-wrap .login-social .tips span{
+       position: relative;
+    top: 13px;
+    font-size: 12px;
+    text-align: center;
+    width: 110px;
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.login-wrap .login-social .social-btn-wrap{
+    text-align: center;
+    margin: 30px 0;
+}
+.login-wrap .login-social .social-btn-wrap .wechat{
+    background: url(./../img/share_btn_wechat.jpg)no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+        background-size: 40px;
+    margin: 0 10px;
+}
+.login-wrap .login-social .social-btn-wrap .qq{
+    background: url(./../img/share_btn_qq.jpg)no-repeat;
+    display: inline-block;
+    width: 40px;
+        background-size: 40px;
+    margin: 0 10px;
+    height: 40px;
+}
+.login-wrap .login-social .social-btn-wrap .weibo{
+    background: url(./../img/share_btn_weibo.jpg)no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+        background-size: 40px;
+    margin: 0 10px;
+}
+.footer-copyright{
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.footer-copyright a{
+    color: #ccc;
+}
+.footer-copyright .copyright{
+    display: block;
+    margin: 10px 0;
+}

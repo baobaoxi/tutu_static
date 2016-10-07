@@ -21,8 +21,6 @@
     background-position: 12px;
 }
 .layer-wrapper .ask-layer-wrap{
-    width: 735px !important;
-    height: 480px !important;
     padding: 25px;
     box-sizing: border-box;
 }
@@ -60,6 +58,16 @@
     border: 1px solid #e1e1e1;
     position: relative;
 }
+.layer-wrapper .ask-layer-wrap .upload-layer-input-wrap .J_InsertImgeMulit{
+    background: url(./../img/icon_img_upload.png)no-repeat;
+    display: block;
+    width: 120px !important;
+    height: 120px !important;
+    cursor: pointer;
+    background-size: 70px;
+    background-position: 25px;
+    border: 1px solid #e1e1e1;
+}
 .layer-wrapper .ask-layer-wrap .upload-layer-input-wrap  .upload-btn{
         position: absolute;
     right: -1px;
@@ -85,6 +93,7 @@
     height: 56px;
     border: 1px solid #eee;
     padding: 10px;
+    font-size: 16px;
     box-sizing: border-box;
     width: 100%;
     display: block;
@@ -183,6 +192,7 @@
     background: url(./../img/icon_checkbox.png)no-repeat;
     display: inline-block;
     cursor: pointer;
+    margin-right: 12px;
     padding-left: 30px;
     height: 26px;
     line-height: 26px;
@@ -193,10 +203,11 @@
     cursor: pointer;
     padding-left: 30px;
     height: 26px;
+    margin-right: 12px;
     line-height: 26px;
 }
 .report-layer-wrap textarea.explanation-textarea{
-    height: 122px;
+    height: 170px;
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
@@ -260,4 +271,165 @@
     position: absolute;
     left: 90px;
     top: 50px;
+}
+ .layer-wrapper  .basic-info-wrap{
+    padding-top: 20px;
+}
+.layer-wrapper  .basic-info-wrap .info-item{
+    height: 45px;
+    margin-bottom: 13px;
+}
+.layer-wrapper  .basic-info-wrap .info-item .info-input{
+    height: 43px;
+    width: 358px;
+    float: right;
+    border: 1px solid #e1e1e1;
+    padding: 5px 10px;
+    float: left;
+    box-sizing: border-box;
+}
+.layer-wrapper  .basic-info-wrap .info-item .info-span{
+    height: 45px;
+    line-height: 45px;
+    text-align: left;
+    margin-right: 5px;
+    width: 32px;
+    display: inline-block;
+    float: left;
+}
+.layer-wrapper  .basic-info-wrap .info-item .sex-select-label{
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    display: block;
+    border: 1px solid #e1e1e1;
+    color: #999;
+    float: left;
+    padding-left: 10px;
+    line-height: 45px;
+    margin-right: 206px;
+    left: 62px;
+}
+.layer-wrapper  .basic-info-wrap .info-item  .select-ul{
+    position: absolute;
+    display: none;
+    width: 100%;
+    background: #eee;
+    top: 0;
+    left: 0;
+}
+.layer-wrapper  .basic-info-wrap .info-item  .select-ul .select-li{
+    height: 45px; 
+    list-style: none;
+    border-bottom: 1px solid #e1e1e1;
+    padding-left: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+ .layer-wrapper  .flayer-bottom {
+    margin-top: 5px;
+}
+.layer-wrapper  .flayer-bottom .cancel-btn{
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.layer-wrapper .ask-layer-wrap .flayer-bottom  .commit-btn{
+    display: inline-block;
+    margin-top: 0px;
+}
+.layer-wrapper .tag-info-wrap{
+    margin-top: 20px;
+}
+.layer-wrapper .tag-info-wrap .tag-input{
+    height: 48px;
+    width: 126px;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 48px;
+    margin-right: 10px;
+}
+.layer-wrapper .tag-info-wrap .tag-tips{
+    line-height: 46px;
+    font-size: 16px;
+    color: #999;
+    display: block;
+}
+.layer-wrapper  .occupation-info-wrap{
+     margin-top: 20px;
+}
+.layer-wrapper .occupation-info-wrap .tag-tips{
+    line-height: 46px;
+    font-size: 16px;
+    color: #999;
+    display: block;
+}
+.layer-wrapper  .occupation-text{
+   padding: 5px 10px;
+    box-sizing: border-box;
+        width: 100%;
+    height: 94px;
+    border: 1px solid #e1e1e1;
+}
+.layer-wrapper  .desc-info-wrap{
+     margin-top: 20px;
+}
+.layer-wrapper .desc-info-wrap .tag-tips{
+    line-height: 46px;
+    font-size: 16px;
+    color: #999;
+    display: block;
+}
+.layer-wrapper  .desc-text{
+   padding: 5px 10px;
+    box-sizing: border-box;
+        width: 100%;
+    height: 94px;
+    border: 1px solid #e1e1e1;
+}
+.share-btn-wrap{
+    margin-top: 20px;
+    text-align:center;
+}
+.share-btn-wrap .flayer-share-wechat{
+    padding-left: 0 !important;
+    padding-top: 44px;
+    background: url(./../img/share/share_btn_wechat.jpg) no-repeat;
+    width: 44px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    margin: 0 18px;
+    background-position: 0 0 !important;
+}
+.share-btn-wrap .flayer-share-qq{
+    padding-top: 44px;
+    padding-left: 0 !important;
+    background: url(./../img/share/share_btn_qq.jpg) no-repeat;
+    width: 44px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    margin: 0 18px;
+    cursor: pointer;
+    background-position: 0 0 !important;
+}
+.share-btn-wrap .flayer-share-weibo{
+    padding-top: 44px;
+    padding-left: 0 !important;
+    background: url(./../img/share/share_btn_weibo.jpg) no-repeat;
+    width: 44px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 18px;
+    cursor: pointer;
+    line-height: 36px;
+    background-position: 0 0 !important;
+}
+.bd_weixin_popup{
+    z-index: 19891015 !important;
 }

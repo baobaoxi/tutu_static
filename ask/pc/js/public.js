@@ -6,11 +6,13 @@ var publicObj = {
         this.followLock = false;
         //举报动作的锁
         this.reportLock = false;
+        //关注该问题的人
+        this.followAskUsersLock = false;
 	},
     //点赞的相关处理
     doUp : function(obj){
         if(publicObj.upLock){
-            layer.msg('hold on!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
             return false;
         }
         publicObj.upLock = true;
@@ -21,7 +23,7 @@ var publicObj = {
         var voteSpan    = _self.children('.ask-vote-num');
         var voteNum     = parseInt(voteSpan.text());
         if(!answerId || !questionId || !userId){
-            layer.msg('param bad!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('参数错误!', {icon: 2, 'time': 1500, 'shade': 0.3});
             publicObj.upLock = false;
             return false;
         }
@@ -43,7 +45,7 @@ var publicObj = {
     //关注的相关处理
     doFollow : function(obj){
         if(publicObj.followLock){
-            layer.msg('hold on!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
             return false;
         }
         publicObj.followLock = true;
@@ -52,7 +54,7 @@ var publicObj = {
         var flag        = parseInt(_self.attr('data-follow'));
         var followNum   = parseInt(_self.attr('data-num'));
         if(!questionId || !userId){
-            layer.msg('param bad!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('参数错误!', {icon: 2, 'time': 1500, 'shade': 0.3});
             publicObj.followLock = false;
             return false;
         }
@@ -78,7 +80,7 @@ var publicObj = {
     //举报参数初始化
     doReportInit : function(obj){
         if(publicObj.reportLock){
-            layer.msg('hold on!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
             return false;
         }
         var _self       = obj; 
@@ -91,7 +93,7 @@ var publicObj = {
     //举报提交
     doReport : function(obj){
         if(publicObj.reportLock){
-            layer.msg('hold on!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
             return false;
         }
         publicObj.reportLock = true;
@@ -101,7 +103,7 @@ var publicObj = {
         var typeId      = parseInt($('#J_report_type_div .checkbox-btn-act').attr('data-type'));
         var content     = $('#J_report_content').val();
         if(!answerId || !userId || !questionId || !content){
-            layer.msg('param bad!', {icon: 2, 'time': 1500, 'shade': 0.3});
+            layer.msg('请填写内容!', {icon: 2, 'time': 1500, 'shade': 0.3});
             publicObj.reportLock = false;
             return false;
         }
@@ -113,6 +115,43 @@ var publicObj = {
         },function(error_no,error_msg){
             layer.msg(error_msg, {icon: 2, 'time': 1500, 'shade': 0.3});
             publicObj.reportLock = false;
+        });
+    },
+    //关注该问题的人加载更多的相关处理
+    getMoreFollowAskUsers : function(obj){
+        if(askIndexM.followAskUsersLock){
+            layer.msg('正在加载中...', {icon: 2, 'time': 1500, 'shade': 0.3});
+            return false;
+        }
+        askIndexM.followAskUsersLock = true;
+        obj.text('加载中...');
+        var _self       = obj;
+        var questionId  = parseInt(_self.attr('data-questionId'));
+        var page        = parseInt(_self.attr('data-page'));
+        var status      = parseInt(_self.attr('data-status'));
+        if(status !== 1 || page < 2){
+            askIndexM.followAskUsersLock = false;
+            obj.text('点击查看更多');
+            return false;
+        }
+        //
+        BTF.post("Question/AjaxFollowAskUsers","&questionId=" + questionId + "&page=" + page, function(data){
+            if(data.state == 1){
+                $('#J_followAskUsersDiv').append(data.dataHtml);
+                _self.attr('data-page',page+1);
+            }else{
+                layer.msg(data.msg, {icon: 2, 'time': 1500, 'shade': 0.3});
+                _self.hide();
+            }
+            if(data.isLastPage > 0){
+                _self.hide();
+            }
+            askIndexM.followAskUsersLock = false;
+            obj.text('点击查看更多');
+        },function(error_no,error_msg){
+            layer.msg(error_msg, {icon: 2, 'time': 1500, 'shade': 0.3});
+            askIndexM.followAskUsersLock = false;
+            obj.text('点击查看更多');
         });
     }
 };
